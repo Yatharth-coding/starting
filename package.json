@@ -1,0 +1,16 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "starting backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "javascript , backend , chai"
+  },
+  "keywords": [
+    "javascript",
+    "backend",
+    "chai"
+  ],
+  "author": "Yatharth Yadav",
+  "license": "ISC"
+}
