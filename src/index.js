@@ -9,6 +9,22 @@ dotenv.config({
 })
 
 connectDB()
+.then(
+    app.listen(process.env.PORT || 8000 , () => {
+        console.log(`Process is listening at the port ${process.env.PORT}`);
+    })
+    
+)
+.then(
+    app.on("errror" , (error)=>{
+            console.log("ERR : " , error)
+            throw error
+        })
+)
+.catch((err)=>{
+    console.log(`The error occured while connectDB in index.js`,err);
+    
+})
 
 /*
 ( async()=>{
