@@ -1,11 +1,12 @@
 // require('dotenv').config({path:'./env'})
 
-
 import connectDB from "./db/index.js";
-import dotenv from "dotenv"
+import dotenv from "dotenv"//dotenv is used to load environment variables from .env files
+import {app} from "./app.js"
+
 
 dotenv.config({
-    path:'./env'
+    path:'./.env'
 })
 
 connectDB()
@@ -15,12 +16,12 @@ connectDB()
     })
     
 )
-.then(
-    app.on("errror" , (error)=>{
-            console.log("ERR : " , error)
-            throw error
-        })
-)
+// .then(
+//     app.on("errror" , (error)=>{
+//             console.log("ERR : " , error)
+//             throw error
+//         })
+// )
 .catch((err)=>{
     console.log(`The error occured while connectDB in index.js`,err);
     
